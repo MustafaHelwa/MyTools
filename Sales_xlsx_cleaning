@@ -1,0 +1,42 @@
+---
+# Sales file Cleaning
+---
+
+library(tidyverse)
+library(openxlsx)
+
+# Function to clean and process sales data
+process_sales_data <- function(mainfolderdir, year, month) {
+  subfolderdir <- file.path(mainfolderdir, paste0("20", year))
+  setwd(subfolderdir)
+  
+  filename <- paste0("S_20", year, month, ".xlsx")
+  filedir <- file.path(subfolderdir, filename)
+  
+  # Read only relevant columns from the Excel file
+  raw_data <- read.xlsx(filedir, cols = c(1, 5:12), startRow = 7)
+  
+  # Filter rows that start with "WFM"
+  cleaned_data <- raw_data %>%
+    filter(grepl("^WFM", Item))
+  
+  # Add a Month column
+  cleaned_data <- cleaned_data %>%
+    mutate(Month = paste(month, year, sep = "-"))
+  
+  # Write the cleaned data to a new file
+  write.xlsx(cleaned_data, file.path(subfolderdir, paste0("Cleaned_", filename)), sheetName = paste0("S", year, month))
+  
+  return(cleaned_data)
+}
+
+# Define input parameters
+year <- "23"
+month <- "08"
+mainfolderdir <- "D:/OneDrive - just.edu.jo/Work/ALL Files/Wafra Center/Item Sales Report"
+
+# Process the sales data
+cleaned_data <- process_sales_data(mainfolderdir, year, month)
+
+# Display the cleaned data
+View(cleaned_data)
