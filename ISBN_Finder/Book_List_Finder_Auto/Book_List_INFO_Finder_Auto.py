@@ -37,7 +37,7 @@ def find_book_info(title):
         }
 
 # Read the Excel file
-excel_file_path = r'C:/Users/theth/Desktop/books.xlsx'  # Update with your file path
+excel_file_path = r'C:/Users/YourUserName/Desktop/books.xlsx'  # Update with your file path
 
 try:
     df = pd.read_excel(excel_file_path)
