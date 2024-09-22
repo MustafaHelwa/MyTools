@@ -54,6 +54,7 @@ yt-dlp -f bestaudio --extract-audio --audio-format mp3 [URL]
 # Download best Video/Audio file available (please refer to `FFmpeg` below)
 yt-dlp -f bestvideo+bestaudio [URL]
 ```
+
 # Detailed Code Explanation
 Here’s a detailed explanation of how the GUI-based YouTube downloader script works:
 ```Python
@@ -156,6 +157,12 @@ root.configure(bg="white")
 root.mainloop()
 ```
 
+## Make your Downloader.EXE
+
+```bash
+pyinstaller --onefile --noconsole youtube_downloader_app.py
+```
+
 ## Key Points:
 - The yt-dlp library is used for downloading both video and audio from YouTube.
 - The script allows users to select their preferred format (Video or Audio) and quality (8K to Low).
@@ -163,8 +170,9 @@ root.mainloop()
 - The GUI is built using Tkinter to make the tool user-friendly.
 
 ## Dependencies
-- Python 3.x
-- yt-dlp library (Install using pip install yt-dlp)
+- Python 3.7+
+- yt-dlp library (Install using `pip install yt-dlp`)
+- Modified FFmpeg requires Windows 7 or later (Install using `winget install "FFmpeg (Essentials Build)"`)
 - Tkinter for creating the GUI (comes pre-installed with Python)
 
 ## Troubleshooting
