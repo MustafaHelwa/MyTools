@@ -36,8 +36,21 @@ This repository contains a Python script that allows users to download YouTube v
     ```
 4. Run the script and specify your preferred download settings (video/audio quality, format, etc.).
 
-## **Code Example**
+## **Simple Code Example** 
 Here's a basic example of how to use PyTube to download YouTube videos:
+```
+#Use Your CMD
+#Go to your file directory (such as desktop)
+
+#for High quality Video download:
+pytube [URL] -v
+
+#for Audio download:
+pytube [URL] -a
+```
+
+## **Detailed Code Example**
+Here's some detailed example of how to use PyTube to download YouTube videos:
 
 ```python
 from pytube import YouTube
@@ -62,7 +75,7 @@ video_stream = yt.streams.get_highest_resolution()
 print("Downloading video...")
 video_stream.download(output_path=".", filename="downloaded_video.mp4")
 print("Download complete!")
-
+```
 
 ## Dependencies: 
 - Python 3.x
@@ -77,6 +90,6 @@ print("Download complete!")
 - FFmpeg Not Found: Ensure FFmpeg is installed and the path is added to your system’s environment variables.
 - Download Issues: If downloads fail, make sure the video URL is correct and supported by PyTube.
 
-##Credits:
+## Credits:
 - This script is built using the PyTube library for YouTube video downloads.
 - Developed by Mustafa Helwa.
