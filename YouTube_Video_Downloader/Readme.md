@@ -36,7 +36,7 @@ This folder contains a Python script for downloading YouTube videos and audio fi
     The files will be automatically saved to your desktop.
 
 ## Dependencies:
-- Python 3.x: The script requires Python 3.x to run. If Python is not installed, download it from here.
+- Python 3.x: The script requires Python 3.x to run. If Python is not installed, download it from [here](https://www.python.org/downloads/).
 - yt-dlp: A powerful command-line program used to download videos from YouTube and many other websites. Install using:
     ```
     pip install yt-dlp
