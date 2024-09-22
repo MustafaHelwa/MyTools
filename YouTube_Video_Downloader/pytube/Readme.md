@@ -10,10 +10,9 @@ This repository contains a Python script that allows users to download YouTube v
 ## **Features**
 - **Video Downloading**: Supports video downloads in multiple resolutions, including 2K, 4K, and 8K.
 - **Audio Downloading**: Option to download audio-only files with adjustable quality settings.
-- **Video & Audio Merge**: Merge video and audio tracks or download them separately.
+- **Video & Audio Merge**: Merge video and audio tracks or download them separately using ```ffmpeg```.
 - **Progress Tracking**: Displays download progress as a percentage.
 - **Custom Quality Options**: Choose from a variety of video and audio quality settings.
-- **User-friendly Interface**: Simple and professional interface that matches the Windows 11 theme.
 
 ## **How to Use**
 
