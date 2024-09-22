@@ -25,15 +25,19 @@ This repository contains a Python script that allows users to download YouTube v
    ```
    pip install yt-dlp tkinter
    ```
+   Then install modified FFmpeg
+   ```
+   winget install "FFmpeg (Essentials Build)"
+   ```
    
-4. **Run the Script**:
+5. **Run the Script**:
  Navigate to the directory where the script is located and run it using Python:
 
     ```
     python youtube_downloader_gui.py
     ```
 
-5. **Using the GUI**:
+6. **Using the GUI**:
 
 - Paste the YouTube video link in the input field.
 - Select whether you want to download Video or Audio from the dropdown menu.
