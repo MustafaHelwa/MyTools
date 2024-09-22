@@ -1,3 +1,7 @@
+# Note [22-09-2024]: 
+**Youtube API has been changed and PyTube is not working for video download. Please check new downloader using [yt-dlp](https://github.com/MustafaHelwa/MyTools/tree/main/YouTube_Video_Downloader/yt-dlp).**
+
+
 # **YouTube Video and Audio Downloader (PyTube)**
 
 ## **Description**
