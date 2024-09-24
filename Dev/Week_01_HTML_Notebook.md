@@ -1,6 +1,8 @@
 ## HTML Learning Journey Notebook  
 **Source:** [freeCodeCamp.org](https://www.freecodecamp.org) and other references.
 
+---
+
 ### Basic HTML Elements
 - **Headline:**  
   `<h1>text</h1>`
@@ -207,5 +209,3 @@
 ```
 
 ---
-
-This version organizes your learning steps into sections and includes clear descriptions and examples for each element. It’s suitable for documenting your HTML learning journey!
