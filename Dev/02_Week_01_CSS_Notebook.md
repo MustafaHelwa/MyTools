@@ -1,7 +1,3 @@
-Here’s the formatted version of your CSS learning journey notebook to match your previous style:
-
----
-
 # CSS Learning Journey Notebook  
 **Source:** [freeCodeCamp.org](https://www.freecodecamp.org) and other references.
 
