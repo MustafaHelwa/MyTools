@@ -39,14 +39,16 @@
     </main>
   ```
 - adding element below h1
-```html
+    ```html
       <h1>CAMPER CAFE</h1>
       <p>Est. 2020</p>
-```
+    ```
 - adding another section, to put h2 menu within it and below h1:
+  ```
       <h1>CAMPER CAFE</h1>
       <p>Est. 2020</p>
       <section>
         <h2>Coffee</h2>
       </section>
+  ```
 - 
