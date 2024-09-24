@@ -1,172 +1,390 @@
+Here’s the formatted version of your CSS learning journey notebook to match your previous style:
+
+---
+
 # CSS Learning Journey Notebook  
 **Source:** [freeCodeCamp.org](https://www.freecodecamp.org) and other references.
 
 ---
+
 ## Learn Basic CSS by Building a Cafe Menu
 
-
-- as learned with html basics file, html starts with: 
+- As learned with HTML basics, HTML starts with: 
+  ```html
   <!DOCTYPE html>
   <html lang="en">
   </html>
-- adding head and title (head title is not visible but used for search engin):
+  ```
+  
+- Adding head and title (the head title is not visible but used for search engines):
+  ```html
   <head> 
-  <title>Cafe Menu</title>
+    <title>Cafe Menu</title>
   </head>
-- add meta characters encoder: 
-    <head>
+  ```
+
+- Add meta character encoding:
+  ```html
+  <head>
     <meta charset="utf-8">
     <title>Cafe Menu</title>
-    </head>
-- adding body below head:
-    <head>
+  </head>
+  ```
+
+- Adding the body below the head:
+  ```html
+  <head>
     <meta charset="utf-8" />
     <title>Cafe Menu</title>
-    </head>
-    <body>
-    </body>
-- adding main element into body:
+  </head>
+  <body>
+  </body>
   ```
-    <body>
-    <main>
-    </main>
-    </body>
-  ````
-- adding <h1> to the main body as the first printable / visible text:
+
+- Adding a main element inside the body:
   ```html
+  <body>
     <main>
-    <h1>CAMPER CAFE</h1>
     </main>
+  </body>
   ```
-- adding element below h1
-    ```html
-      <h1>CAMPER CAFE</h1>
-      <p>Est. 2020</p>
-    ```
-- adding another section, to put h2 menu within it and below h1:
+
+- Adding an `<h1>` to the main body as the first printable/visible text:
+  ```html
+  <main>
+    <h1>CAMPER CAFE</h1>
+  </main>
   ```
-      <h1>CAMPER CAFE</h1>
-      <p>Est. 2020</p>
-      <section>
-        <h2>Coffee</h2>
-      </section>
+
+- Adding an element below `<h1>`:
+  ```html
+  <h1>CAMPER CAFE</h1>
+  <p>Est. 2020</p>
   ```
-- adding style to head element:
-    <head>
-      <meta charset="utf-8" />
-      <title>Cafe Menu</title>
-      <style>
-      </style>
-    </head>
-- adding h1 style settings:
-      <style>
-      h1 {
-        text-align: center;
-        }
-      </style>
-- adding styles for h2 and p (i found that I can use h2, p instead of make 2 type selectors):
+
+- Adding another section to put `<h2>` (menu) under `<h1>`:
+  ```html
+  <h1>CAMPER CAFE</h1>
+  <p>Est. 2020</p>
+  <section>
+    <h2>Coffee</h2>
+  </section>
+  ```
+
+- Adding styles in the head element:
+  ```html
+  <head>
+    <meta charset="utf-8" />
+    <title>Cafe Menu</title>
     <style>
-      h1 {
-        text-align: center;
-      }
-      h2 {
-        text-align: center;
-      }
-      p {
-        text-align: center;
-      }
     </style>
-- To avoid duplicated type selectors: 
-    <style>
-      h1, h2, p {
-        text-align: center;
-      }
-    </style>
-- make this css code in file called `styles.css` and rewrite the styling code:
+  </head>
+  ```
+
+- Adding style settings for `<h1>`:
+  ```css
+  <style>
+    h1 {
+      text-align: center;
+    }
+  </style>
+  ```
+
+- Adding styles for `<h2>` and `<p>`:
+  ```css
+  <style>
+    h1 {
+      text-align: center;
+    }
+    h2 {
+      text-align: center;
+    }
+    p {
+      text-align: center;
+    }
+  </style>
+  ```
+
+- Simplify by combining selectors:
+  ```css
+  <style>
     h1, h2, p {
       text-align: center;
     }
-- now, I can remove <style> element from `index.html` file: 
-    <style>
-      h1, h2, p {
-        text-align: center;
-      }
-    </style>
-- to link index.html to styles.css use the below link in head element:
-   <link rel="stylesheet" href="styles.css">
-- Make meta adjust window size for mobile and browser:
+  </style>
+  ```
+
+- Create a `styles.css` file and move the CSS code:
+  ```css
+  h1, h2, p {
+    text-align: center;
+  }
+  ```
+
+- Link `index.html` to `styles.css`:
+  ```html
+  <link rel="stylesheet" href="styles.css">
+  ```
+
+- Adjust window size for mobile and browser:
+  ```html
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  ```
+
+- Add a background color in `styles.css`:
+  ```css
+  body {
+    background-color: burlywood;
+  }
+  ```
+
+- Add a `div` for layout:
+  ```html
+  <div id="menu">
+    <main>...</main>
+  </div>
+  ```
+
+- Style the `#menu` element:
+  ```css
+  #menu {
+    width: 80%;
+    background-color: burlywood;
+    margin: 0 auto;
+  }
+  ```
+
+- Replace `#menu` with `.menu` (class selector):
+  ```html
+  <div class="menu">...</div>
+  ```
+
+- Set the body background to an image:
+  ```css
+  body {
+    background-image: url(https://cdn.freecodecamp.org/curriculum/css-cafe/beans.jpg);
+  }
+  ```
+
+- Add coffee flavors with aligned prices:
+  ```html
+  <article class="item">
+    <p class="flavor">French Vanilla</p><p class="price">3.00</p>
+  </article>
+  ```
+
+- Style `.flavor` and `.price`:
+  ```css
+  .flavor {
+    text-align: left;
+    width: 75%;
+  }
+  
+  .price {
+    text-align: right;
+    width: 25%;
+  }
+  ```
+
+- Add other coffee flavors and a dessert section.
+
+- Style the entire menu:
+  ```css
+  .menu {
+    width: 80%;
+    background-color: burlywood;
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 500px;
+  }
+  ```
+
+- Adjust font and add an icon to the `<h2>` tag:
+  ```html
+  <h2>Coffee</h2>
+  <img src="https://cdn.freecodecamp.org/curriculum/css-cafe/coffee.jpg" alt="coffee icon">
+  ```
+
+- Style the footer and `<hr>` divider:
+  ```css
+  hr {
+    height: 2px;
+    background-color: brown;
+  }
+  ```
+
+- Final HTML and CSS code included below for easy reference.
+
+---
+### Final Example Code `styles.css`:
+```css
+body {
+  background-image: url(https://cdn.freecodecamp.org/curriculum/css-cafe/beans.jpg);
+  font-family: sans-serif;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 40px;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+.established {
+  font-style: italic;
+}
+
+h1, h2, p {
+  text-align: center;
+}
+
+.menu {
+  width: 80%;
+  background-color: burlywood;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+  max-width: 500px;
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+    margin-top: -25px;
+}
+
+hr {
+  height: 2px;
+  background-color: brown;
+  border-color: brown;
+}
+
+.bottom-line {
+  margin-top: 25px;
+}
+
+h1, h2 {
+  font-family: Impact, serif;
+}
+
+.item p {
+  display: inline-block;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: 18px;
+}
+
+.flavor, .dessert {
+  text-align: left;
+  width: 75%;
+}
+
+.price {
+  text-align: right;
+  width: 25%;
+}
+
+/* FOOTER */
+
+footer {
+  font-size: 14px;
+}
+
+.address {
+  margin-bottom: 5px;
+}
+
+a {
+  color: black;
+}
+
+a:visited {
+  color: black;
+}
+
+a:hover {
+  color: brown;
+}
+
+a:active {
+  color: brown;
+}
+```
+
+---
+
+### Final Example Code `index.html`:
+```html
+<!DOCTYPE html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cafe Menu</title>
     <link href="styles.css" rel="stylesheet"/>
   </head>
-- in styles.css, add a style for background element to make it brown :
-    body {
-      background-color: brown;
-    }
-- as it is not good, change it to burlywood:
-    body {
-    background-color: burlywood;
-    }
-- for design layout purpose, add div and name it menu:
-    <body>
-      <div id="menu">
+  <body>
+    <div class="menu">
       <main>
         <h1>CAMPER CAFE</h1>
-        <p>Est. 2020</p>
+        <p class="established">Est. 2020</p>
+        <hr>
         <section>
           <h2>Coffee</h2>
+          <img src="https://cdn.freecodecamp.org/curriculum/css-cafe/coffee.jpg" alt="coffee icon"/>
+          <article class="item">
+            <p class="flavor">French Vanilla</p><p class="price">3.00</p>
+          </article>
+          <article class="item">
+            <p class="flavor">Caramel Macchiato</p><p class="price">3.75</p>
+          </article>
+          <article class="item">
+            <p class="flavor">Pumpkin Spice</p><p class="price">3.50</p>
+          </article>
+          <article class="item">
+            <p class="flavor">Hazelnut</p><p class="price">4.00</p>
+          </article>
+          <article class="item">
+            <p class="flavor">Mocha</p><p class="price">4.50</p>
+          </article>
+        </section>
+        <section>
+          <h2>Desserts</h2>
+          <img src="https://cdn.freecodecamp.org/curriculum/css-cafe/pie.jpg" alt="pie icon"/>
+          <article class="item">
+            <p class="dessert">Donut</p><p class="price">1.50</p>
+          </article>
+          <article class="item">
+            <p class="dessert">Cherry Pie</p><p class="price">2.75</p>
+          </article>
+          <article class="item">
+            <p class="dessert">Cheesecake</p><p class="price">3.00</p>
+          </article>
+          <article class="item">
+            <p class="dessert">Cinnamon Roll</p><p class="price">2.50</p>
+          </article>
         </section>
       </main>
-      </div>
-    </body>
-- using div id, change css format width:
-    #menu {
-    width: 300px;
-    }
-- comment in css: /* comment here */
-- Change color for id instead of full page:
-    #menu {
-      background-color: burlywood; 
-      width: 300px;
-    }
-- make width 80% of the body:
-  #menu {
-    width: 300px;
-    background-color: burlywood;
-    width: 80%; 
-  }
-- add auto margin for left and right:
-  #menu {
-    width: 80%;
-    background-color: burlywood;
-    margin-left:auto;
-    margin-right: auto; 
-  }
-- instead of calling id (#menu) use class selector (.menu)
-- thus, change id to class:
-     <div class="menu">
-- make body background as an image:
-  body {
-    background-image: url(https://cdn.freecodecamp.org/curriculum/css-cafe/beans.jpg);
-  }
-- add article under h2:
-    <h2>Coffee</h2>
-    <article>
-    </article>
-  - within article, add             <p>French Vanilla</p> <p>3.00</p>
-  - adding class name in `p`
-      <p class="flavor">French Vanilla</p>
-      <p>3.00</p>
-  - in css, aligning class name: 
-      .flavor{
-      text-align: left;
-      }
-  - same, adding price name: 
-      <p class="price">3.00</p>
-  - aligning price to the right: 
-      .price{
-      text-align: right;
-      }
-  - 
+      <hr class="bottom-line">
+      <footer>
+        <p>
+          <a href="https://www.freecodecamp.org" target="_blank">Visit our website</a>
+        </p>
+        <p class="address">123 Free Code Camp Drive</p>
+      </footer>
+    </div>
+  </body>
+</html>
+```
+
+---
+
+### Output: 
+
+![css preview](https://github.com/user-attachments/assets/fb771838-ddaa-455e-87e4-a438348ad6cc)
+
