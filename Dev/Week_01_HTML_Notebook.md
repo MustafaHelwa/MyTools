@@ -1,7 +1,8 @@
-## HTML Learning Journey Notebook  
+# HTML Learning Journey Notebook  
 **Source:** [freeCodeCamp.org](https://www.freecodecamp.org) and other references.
 
 ---
+## Learn HTML by Building a Cat Photo App:
 
 ### Basic HTML Elements
 - **Headline:**  
