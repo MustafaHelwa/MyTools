@@ -56,4 +56,10 @@
     background-color: rgb(0, 0, 0);
     }
 - using shorthand padding `  padding: 10px 0;` this will give 10px padding to top and bot while 0 to left and righ
-- 
+- a hex color code with the values 00 for red, FF for green, and 00 blue
+- With hex colors, 00 is 0% of that color, and FF is 100%. So #00FF00 translates to 0% red, 100% green, and 0% blue, and is the same as rgb(0, 255, 0).
+- HSL color model, or hue, saturation, and lightness. The CSS hsl function accepts 3 values: a number from 0 to 360 for hue, a percentage from 0 to 100 for saturation, and a percentage from 0 to 100 for lightness.
+ 	background-color: hsl(240, 100%, 50%);
+- linear-gradient(gradientDirection, color1, color2, ...);
+-   background: linear-gradient(90deg, rgb(255, 0, 0), rgb(0, 255, 0));
+-   
