@@ -247,3 +247,10 @@ h1 {
   box-shadow: 0 0 20px 0 hsla(223, 59%, 31%, 0.8);
 }
 ```
+
+---
+
+### Output: 
+
+![css preview](https://github.com/user-attachments/assets/c30ff911-f6e3-46ba-a084-a9f3607aad0c)
+
