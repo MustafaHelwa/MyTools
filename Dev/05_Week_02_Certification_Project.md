@@ -6,7 +6,7 @@
 
 ### Note:
 
-In this project, I referred to the [Original Styles.css](https://survey-form.freecodecamp.rocks/styles.css) and [Original index.html](view-source:https://survey-form.freecodecamp.rocks/) pages to build the required [Project outcome](https://survey-form.freecodecamp.rocks/). More about code analysis below.
+In this project, I referred to the [Original styles.css](https://survey-form.freecodecamp.rocks/styles.css) and [Original index.html](view-source:https://survey-form.freecodecamp.rocks/) pages to build the required [Project outcome](https://survey-form.freecodecamp.rocks/). More about code analysis below.
 
 ---
 
