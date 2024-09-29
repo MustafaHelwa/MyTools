@@ -475,5 +475,5 @@ Final HTML Code:
 ```
 
 --- 
-
-(img)[]
+### Part 1 Result: 
+![Part 1 result](https://github.com/user-attachments/assets/d4d6bbcd-8289-44f5-a37f-b5705e6980c8)
