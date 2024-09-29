@@ -48,7 +48,7 @@ In this project, I referred to the [Original Styles.css](https://survey-form.fre
 
 - Inside `<form>`, each input element is placed inside a separate `<div>` for better structure and readability:
 
-  1. **Name Input**: 
+1. **Name Input**: 
      
 ```html
 <div class="form-group">
