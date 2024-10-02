@@ -92,5 +92,73 @@
   justify-content: space-between;
   }
 
-- 
-  - 
+- Wrap all `.label` elements within a `<header>` and add header to h1 style in css file:
+  1. html:
+       <div class="label">
+    <header>
+      <h1 class="bold">Nutrition Facts</h1>
+      <div class="divider"></div>
+      <p>8 servings per container</p>
+      <p class="bold">Serving size <span>2/3 cup (55g)</span></p>
+    </header>
+  </div>
+  3. CSS:
+  header h1 {
+  text-align: center;
+  margin: -4px 0;
+  letter-spacing: 0.15px
+}
+ 
+- Create a <div> element below the <header>
+  <div class="divider large">
+  </diV>
+
+- Create a suitable style for `.large` and `.medium`:
+  .large {
+  height: 10px;
+
+}
+.large, .medium{ 
+  background-color: black;
+    border: 0;
+}
+
+- Create a new <div> below `divider large` <div> element and add <h2> within it: 
+        <div class="calories-info">
+      <div class="left-container">
+        <h2 class="bold small-text">Amount per serving</h2>
+      </div>
+          </div>
+- change `.small-text` label `font-size` using `rem` which stands for `root em`. it relatives font size to the html font size (16px in this project):
+  .small-text{ 
+  font-size: 0.85rem;
+  
+  }
+
+- Remove all margins for ` .calories-info h2`: 
+  .calories-info h2{
+  margin: 0;
+  }
+
+-  Add `calories` and `230` as below:
+      <div class="calories-info">
+      <div class="left-container">
+        
+        <h2 class="bold small-text">Amount per serving</h2>
+        <p>Calories</p>
+      </div>
+      <span>230</span>
+    </div>
+
+
+ - 
+
+
+
+
+
+
+
+  - Different between: Margin, border, and padding ([source](https://webflow.com/blog/padding-vs-margin)):
+ 
+     ![image](https://github.com/user-attachments/assets/631940ba-035e-43ec-8b98-07858cae5b6f)
