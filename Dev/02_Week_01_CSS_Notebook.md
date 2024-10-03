@@ -194,6 +194,9 @@
     max-width: 500px;
   }
   ```
+- Different between: Margin, border, and padding ([source](https://webflow.com/blog/padding-vs-margin)):
+
+     <img src="https://github.com/user-attachments/assets/631940ba-035e-43ec-8b98-07858cae5b6f" width="500">
 
 - Adjust font and add an icon to the `<h2>` tag:
   ```html
