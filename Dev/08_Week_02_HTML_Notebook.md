@@ -151,14 +151,74 @@
     </div>
 
 
- - 
+ - Create the below style for `.calorise-info`:
+   .calories-info{ 
+  display: flex; 
+  justify-content: space-between; 
+  align-items: flex-end; 
+  }
+
+- Create a new .left-container p selector setting the top and bottom margin to -5px, and the left and right margin to -2px. Also set the font-size to 2em and font-weight to 700:
+
+   .left-container p {
+  margin: -5px -2px;
+  font-size: 2em; 
+  font-weight: 700;
+  }
+
+- Create a .calories-info span selector, set its font-size to 2.4em and font-weight to 700 and adjust maring (top and bottom) to -7px and (right and left) to -2px:
+  .calories-info span {
+  font-size: 2.4em; 
+  font-weight: 700;
+  margin: -7px -2px;
+  }
+
+- add a new <div> below `.calories-info` <div> :
+
+  <div class="divider medium"> 
+  </div>
+
+- Create a `.medium` selector and give it a `height` of `5px`:
+  .medium{
+  height: 5px; 
+  } 
+
+- Add a new <div> and add <p> element within it as below:
+      <div class="divider medium"></div>
+    <div class= "daily-value small-text">
+      <p class="bold right">% Daily Value *</p></div>
+
+ - Make <p> always on the right usin `flex-end`:
+   .right {
+  justify-content: flex-end;
+   }
+
+ - Use the same `.divider` used above to add a new divider below <p> element:
+       `<div class="divider"></div>
+
+  - Create a new <p> element of text `Total Fat 8g 10%` and wrap `Total Fat` and `10%` with 2 separate <span> elements and make them **bold**: 
+
+        <div class="daily-value small-text">
+      <p class="bold right">% Daily Value *</p>
+      <div class="divider"></div>
+      <p><span class="bold">Total Fat</span> 8g <span class="bold">10%</span></p>
+    </div>
+
+- As `Total Fat` and `8g` are not wraped in one text, wrap them both within a new <span> element to make them one element but `8g` is not in bold:
+  <p><span><span class="bold">Total Fat</span> 8g</span> <span class="bold">10%</span></p>
+
+- Add another <p> element to show `Saturated Fat` and just keep the percent **bold** and give the new <p> element a class of `indent` for further styling:
+  <p>Saturated Fat 1g <span class="bold">5%</span></p>
+
+- Create a `.indent` selector style of a `margin-left` to show it as a subelement:
+  .indent{ 
+  margin-left: 1em;
+  }
+
+- Cleate a `.daily-value p` selector to target all `p` elements in the `daily-value` and give it a bottom border of 1px :
+  .daily-value p{ 
+  border-bottom: 1px solid #888989;
+  }
 
 
-
-
-
-
-
-  - Different between: Margin, border, and padding ([source](https://webflow.com/blog/padding-vs-margin)):
- 
-     ![image](https://github.com/user-attachments/assets/631940ba-035e-43ec-8b98-07858cae5b6f)
+- 
