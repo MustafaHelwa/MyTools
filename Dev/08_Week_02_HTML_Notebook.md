@@ -221,4 +221,52 @@
   }
 
 
+- add `no-divider` class to <p> element of `% Daily Value` and `Saturated Fat 1g` to make it cover full width of the label:
+     <div class="daily-value small-text">
+      <p class="bold right no-divider">% Daily Value *</p>
+      <div class="divider"></div>
+      <p><span><span class="bold">Total Fat</span> 8g</span> <span class="bold">10%</span></p>
+      <p class="indent no-divider">Saturated Fat 1g <span class="bold">5%</span></p>
+    </div>
+
+- Note: The `:not` pseudo-selector can be used to select all elements that do not match the given CSS rule.
+
+- Modify `.daily-value p` selector to exclude `.no-divider` elements:
+   .daily-value p:not(.no-divider){
+    border-bottom: 1px solid #888989;
+   }
+
+-  Add a new <div> of class `divider` below the last <p> element:
+        <div class="divider"></div>
+
+- Under the last <div> created, create a <p> to show `Trans Fat 0g` text with italic `Trans`, then wrap it all for alignment: 
+        <p class="indent no-divider"><span><i>Trans</i> Fat 0g</span></p>
+
+- Create another `.divider` <div> element below it then create a new <p> element shows `Cholesterol 0mg 0%` while keeping both `Cholesterol` and `0%` in `bold` :
+  <div class="divider"></div>
+  <p><span><span class="bold">Cholesterol</span> 0mg</span> <span class="bold">0%</span></p>
+
+- Create a new two <p> elements and make them show `Sodium 160mg 7%` and `Total Carbohydrate 37g 13%` with similar style to the one above:
+        <p><span><span class="bold">Sodium</span> 160mg</span> <span class="bold">7%</span></p>
+        <p><span><span class="bold">Total Carbohydrate</span> 37g</span> <span class="bold"> 13%</span></p>
+- Add another <p> element shows `Dietary Fiber 4g` withot a divider then add a divider element below it:
+        <p class="indent no-divider">Dietary Fiber 4g</p>
+      <div class="divider"></div>
+
+ - Add another <p> element of `Total Sugars 12g` text without a divider, then add a divider below it:
+    <p class="indent no-divider">Total Sugars 12g</p>
+      <div class="divider"></div>
+
+  - Add `double-indent` class to the last <div> to allow for individual styling:
+          <div class="divider double-indent"></div>
+- add a class `.double-indent` selector with a left margin of `2em`:
+  .double-indent{
+  margin-left: 2em;
+   }
+
+- Add a new <p> to show `Includes 10g Added Sugars` to the left and `20%` to the right in bold, make it double-indent and add a divider below it:
+        <p class="double-indent no-divider">Includes 10g Added Sugars <span class="bold">20%</span> </p> 
+      <div class="divider double-indent"></div>
+
+
 - 
