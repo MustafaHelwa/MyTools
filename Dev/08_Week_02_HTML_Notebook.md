@@ -1,20 +1,20 @@
 # HTML Learning Journey Notebook  
-**Source:** [freeCodeCamp.org](https://www.freecodecamp.org) and other references.  
-**Project:** Learn Typography by Building a Nutrition Label
+**Source:** [freeCodeCamp.org](https://www.freecodecamp.org)  
+**Project:** Learn Typography by Building a Nutrition Label  
 
---- 
+---
 
-### HTML and CSS Step-by-Step Guide
+### HTML and CSS Step-by-Step Guide  
 
-#### Basic Setup
- - Starting with basic head & body:
-     <!DOCTYPE html>
+#### Basic Setup  
+- **Basic structure:**  
+```html
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <title>Nutrition Label</title>
-  
 </head>
 
 <body>
@@ -23,250 +23,255 @@
   <p>Serving size 2/3 cup (55g)</p>
 </body>
 </html>
+```
 
-- Adding `styles.css` link and link to font within <head>:
-      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800">
-  <link  rel="stylesheet" href="styles.css"> 
+- **Adding external styles and fonts:**  
+```html
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800">
+<link rel="stylesheet" href="styles.css">
+```
 
-- Use the imported font family to the body in `styles.css`:
-  body{
+- **Set body font:**  
+```css
+body {
   font-family: "Open Sans", sans-serif;
+}
+```
 
-  }
-- make `html` font size 16px:
-  html{
+- **HTML root font-size:**  
+```css
+html {
   font-size: 16px;
-  }
-- Wrap <h1> and <p> elements with a <div> element with `class` set to `label`
-    <div class="label">
-    </div>
+}
+```
 
-  - Set a border to the `.label`:
-    .label{
-      border: 2px solid black;
-      width: 270px;
-      margin: 20px auto; 
-    padding : 0 7px; 
-    }
--  reset the box model by creating a * selector and giving it a box-sizing property of border-box:
-  *{ 
+#### Creating the Label Layout  
+- **Wrap the content in a div:**  
+```html
+<div class="label">
+</div>
+```
+
+- **CSS for `.label` div:**  
+```css
+.label {
+  border: 2px solid black;
+  width: 270px;
+  margin: 20px auto;
+  padding: 0 7px;
+}
+```
+
+- **Reset box model:**  
+```css
+* {
   box-sizing: border-box;
+}
+```
 
-  }
-
-- Set h1 font style to font-weight of 800 and center text and make top/bottom margins -4px and letter spacing of 0.15px and remove margins of p :
-  h1 {
+- **Styling the `h1` element:**  
+```css
+h1 {
   font-weight: 800;
   text-align: center;
   margin: -4px 0;
-  letter-spacing: 0.15px; 
-  }
-  p {
-    margin: 0;
-  }
+  letter-spacing: 0.15px;
+}
+```
 
-- Make a <div> element of class equal to divider below <h1> element and set a bottom border for it:
-  1. html:
-        <div class="divider"></div>
-  2. css:
-   .divider{
-    border-bottom: 1px solid #888989;
-    margin: 2px 0;
-    }
-- adjust the second <p> element to class of bold:
-      <p class="bold">Serving size 2/3 cup (55g)</p>
-
-- Adjust font weight of .bold to 800:
-  .bold {
-  font-weight: 800;
-  }
-- Adjust <h1> elemment to class of bold:
-    <h1 class="bold">Nutrition Facts</h1>
-- Wrap serving size with a <span> element for further highlight:
-      <p class="bold">Serving size<span> 2/3 cup (55g)</span></p>
-
-- Adjust <p> style:
-  p {
+- **Remove paragraph margins:**  
+```css
+p {
   margin: 0;
+}
+```
+
+#### Adding Dividers and Sections  
+- **Add a divider below the `h1` tag:**  
+```html
+<div class="divider"></div>
+```
+
+- **CSS for `.divider`:**  
+```css
+.divider {
+  border-bottom: 1px solid #888989;
+  margin: 2px 0;
+}
+```
+
+- **Update serving size paragraph:**  
+```html
+<p class="bold">Serving size <span>2/3 cup (55g)</span></p>
+```
+
+- **Bold class CSS:**  
+```css
+.bold {
+  font-weight: 800;
+}
+```
+
+- **Adding calories info section:**  
+```html
+<div class="calories-info">
+  <div class="left-container">
+    <h2 class="bold small-text">Amount per serving</h2>
+    <p>Calories</p>
+  </div>
+  <span>230</span>
+</div>
+```
+
+- **Styling the calories info:**  
+```css
+.calories-info {
   display: flex;
   justify-content: space-between;
-  }
+  align-items: flex-end;
+}
+.left-container p {
+  margin: -5px -2px;
+  font-size: 2em;
+  font-weight: 700;
+}
+.calories-info span {
+  margin: -7px -2px;
+  font-size: 2.4em;
+  font-weight: 700;
+}
+```
 
-- Wrap all `.label` elements within a `<header>` and add header to h1 style in css file:
-  1. html:
-       <div class="label">
+#### Adding Nutrient Values  
+- **Creating daily value section:**  
+```html
+<div class="daily-value small-text">
+  <p class="bold right no-divider">% Daily Value *</p>
+  <div class="divider"></div>
+  <p><span><span class="bold">Total Fat</span> 8g</span> <span class="bold">10%</span></p>
+  <p class="indent no-divider">Saturated Fat 1g <span class="bold">5%</span></p>
+</div>
+```
+
+- **Indent for sub-nutrient:**  
+```css
+.indent {
+  margin-left: 1em;
+}
+```
+
+- **Adjusting divider for specific elements:**  
+```css
+.daily-value p:not(.no-divider) {
+  border-bottom: 1px solid #888989;
+}
+```
+
+- **Italicize trans fat value:**  
+```html
+<p class="indent no-divider"><span><i>Trans</i> Fat 0g</span></p>
+```
+
+#### Final Elements  
+- **Remaining nutrient values:**  
+```html
+<p><span><span class="bold">Cholesterol</span> 0mg</span> <span class="bold">0%</span></p>
+<p><span><span class="bold">Sodium</span> 160mg</span> <span class="bold">7%</span></p>
+<p><span><span class="bold">Total Carbohydrate</span> 37g</span> <span class="bold">13%</span></p>
+<p class="indent no-divider">Dietary Fiber 4g</p>
+<div class="divider"></div>
+<p class="indent no-divider">Total Sugars 12g</p>
+<div class="divider"></div>
+<p class="double-indent no-divider">Includes 10g Added Sugars <span class="bold">20%</span></p>
+<p class="indent no-divider"><span class="bold">Protein</span> 3g</p>
+<div class="divider large"></div>
+<p>Vitamin D 2mcg <span>10%</span></p>
+<p>Calcium 260mg <span>20%</span></p>
+<p>Iron 8mg <span>45%</span></p>
+<p class="no-divider">Potassium 235mg <span>6%</span></p>
+```
+
+#### Note Section  
+- **Add nutrition note:**  
+```html
+<p class="note">* The % Daily Value (DV) tells you how much a nutrient in a serving of food contributes to a daily diet. 2,000 calories a day is used for general nutrition advice.</p>
+```
+
+- **CSS for `.note`:**  
+```css
+.note {
+  font-size: 0.6rem;
+  margin: 5px 0;
+  padding: 0 8px;
+  text-indent: -8px;
+}
+```
+
+---
+
+**Final HTML Structure:**
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Nutrition Label</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="label">
     <header>
       <h1 class="bold">Nutrition Facts</h1>
       <div class="divider"></div>
       <p>8 servings per container</p>
       <p class="bold">Serving size <span>2/3 cup (55g)</span></p>
     </header>
-  </div>
-  3. CSS:
-  header h1 {
-  text-align: center;
-  margin: -4px 0;
-  letter-spacing: 0.15px
-}
- 
-- Create a <div> element below the <header>
-  <div class="divider large">
-  </diV>
-
-- Create a suitable style for `.large` and `.medium`:
-  .large {
-  height: 10px;
-
-}
-.large, .medium{ 
-  background-color: black;
-    border: 0;
-}
-
-- Create a new <div> below `divider large` <div> element and add <h2> within it: 
-        <div class="calories-info">
+    <div class="divider large"></div>
+    <div class="calories-info">
       <div class="left-container">
-        <h2 class="bold small-text">Amount per serving</h2>
-      </div>
-          </div>
-- change `.small-text` label `font-size` using `rem` which stands for `root em`. it relatives font size to the html font size (16px in this project):
-  .small-text{ 
-  font-size: 0.85rem;
-  
-  }
-
-- Remove all margins for ` .calories-info h2`: 
-  .calories-info h2{
-  margin: 0;
-  }
-
--  Add `calories` and `230` as below:
-      <div class="calories-info">
-      <div class="left-container">
-        
         <h2 class="bold small-text">Amount per serving</h2>
         <p>Calories</p>
       </div>
       <span>230</span>
     </div>
-
-
- - Create the below style for `.calorise-info`:
-   .calories-info{ 
-  display: flex; 
-  justify-content: space-between; 
-  align-items: flex-end; 
-  }
-
-- Create a new .left-container p selector setting the top and bottom margin to -5px, and the left and right margin to -2px. Also set the font-size to 2em and font-weight to 700:
-
-   .left-container p {
-  margin: -5px -2px;
-  font-size: 2em; 
-  font-weight: 700;
-  }
-
-- Create a .calories-info span selector, set its font-size to 2.4em and font-weight to 700 and adjust maring (top and bottom) to -7px and (right and left) to -2px:
-  .calories-info span {
-  font-size: 2.4em; 
-  font-weight: 700;
-  margin: -7px -2px;
-  }
-
-- add a new <div> below `.calories-info` <div> :
-
-  <div class="divider medium"> 
-  </div>
-
-- Create a `.medium` selector and give it a `height` of `5px`:
-  .medium{
-  height: 5px; 
-  } 
-
-- Add a new <div> and add <p> element within it as below:
-      <div class="divider medium"></div>
-    <div class= "daily-value small-text">
-      <p class="bold right">% Daily Value *</p></div>
-
- - Make <p> always on the right usin `flex-end`:
-   .right {
-  justify-content: flex-end;
-   }
-
- - Use the same `.divider` used above to add a new divider below <p> element:
-       `<div class="divider"></div>
-
-  - Create a new <p> element of text `Total Fat 8g 10%` and wrap `Total Fat` and `10%` with 2 separate <span> elements and make them **bold**: 
-
-        <div class="daily-value small-text">
-      <p class="bold right">% Daily Value *</p>
-      <div class="divider"></div>
-      <p><span class="bold">Total Fat</span> 8g <span class="bold">10%</span></p>
-    </div>
-
-- As `Total Fat` and `8g` are not wraped in one text, wrap them both within a new <span> element to make them one element but `8g` is not in bold:
-  <p><span><span class="bold">Total Fat</span> 8g</span> <span class="bold">10%</span></p>
-
-- Add another <p> element to show `Saturated Fat` and just keep the percent **bold** and give the new <p> element a class of `indent` for further styling:
-  <p>Saturated Fat 1g <span class="bold">5%</span></p>
-
-- Create a `.indent` selector style of a `margin-left` to show it as a subelement:
-  .indent{ 
-  margin-left: 1em;
-  }
-
-- Cleate a `.daily-value p` selector to target all `p` elements in the `daily-value` and give it a bottom border of 1px :
-  .daily-value p{ 
-  border-bottom: 1px solid #888989;
-  }
-
-
-- add `no-divider` class to <p> element of `% Daily Value` and `Saturated Fat 1g` to make it cover full width of the label:
-     <div class="daily-value small-text">
+    <div class="divider medium"></div>
+    <div class="daily-value small-text">
       <p class="bold right no-divider">% Daily Value *</p>
       <div class="divider"></div>
       <p><span><span class="bold">Total Fat</span> 8g</span> <span class="bold">10%</span></p>
       <p class="indent no-divider">Saturated Fat 1g <span class="bold">5%</span></p>
+      <p class="indent no-divider"><span><i>Trans</i> Fat 0g</span></p>
+      <div class="divider"></div>
+      <p><span class="bold">Cholesterol</span> 0mg <span class="bold">0%</span></p>
+      <p><span class="bold">Sodium</span> 160mg <span class="bold">7%</span></p>
+      <p><span class="bold">Total Carbohydrate</span> 37g <span class="bold">13%</span></p>
+      <p class="indent no-divider">Dietary Fiber 4g</p>
+      <div class="divider"></div>
+      <p class="indent no-divider">Total Sugars 12g</p>
+      <div class="divider"></div>
+      <p class="double-indent no-divider">Includes 10g Added Sugars <span class="bold">20%</span></p>
+      <p class="indent no-divider"><span class="bold">Protein</span> 3g</p>
+      <div class="divider large"></div>
+      <p>Vitamin D 2mcg <span>10%</span></p>
+      <p>Calcium 260mg <span>20%</span></p>
+      <p>Iron 8mg <span>45%</span></p>
+      <p class="no-divider">Potassium 235mg <span>6%</span></p>
     </div>
+    <div class="divider medium"></div>
+    <p class="note">* The % Daily Value (DV) tells you how much a nutrient in a serving of food contributes to a daily diet. 2,000 calories a day is used for general nutrition advice.</p>
+  </div>
+</body>
 
-- Note: The `:not` pseudo-selector can be used to select all elements that do not match the given CSS rule.
+</html>
+```
 
-- Modify `.daily-value p` selector to exclude `.no-divider` elements:
-   .daily-value p:not(.no-divider){
-    border-bottom: 1px solid #888989;
-   }
+---
 
--  Add a new <div> of class `divider` below the last <p> element:
-        <div class="divider"></div>
+**Final output**:
 
-- Under the last <div> created, create a <p> to show `Trans Fat 0g` text with italic `Trans`, then wrap it all for alignment: 
-        <p class="indent no-divider"><span><i>Trans</i> Fat 0g</span></p>
+![Nutrition Facts](https://github.com/user-attachments/assets/e43825ef-9c31-4b32-ad80-ab7f8e8f1648)
 
-- Create another `.divider` <div> element below it then create a new <p> element shows `Cholesterol 0mg 0%` while keeping both `Cholesterol` and `0%` in `bold` :
-  <div class="divider"></div>
-  <p><span><span class="bold">Cholesterol</span> 0mg</span> <span class="bold">0%</span></p>
-
-- Create a new two <p> elements and make them show `Sodium 160mg 7%` and `Total Carbohydrate 37g 13%` with similar style to the one above:
-        <p><span><span class="bold">Sodium</span> 160mg</span> <span class="bold">7%</span></p>
-        <p><span><span class="bold">Total Carbohydrate</span> 37g</span> <span class="bold"> 13%</span></p>
-- Add another <p> element shows `Dietary Fiber 4g` withot a divider then add a divider element below it:
-        <p class="indent no-divider">Dietary Fiber 4g</p>
-      <div class="divider"></div>
-
- - Add another <p> element of `Total Sugars 12g` text without a divider, then add a divider below it:
-    <p class="indent no-divider">Total Sugars 12g</p>
-      <div class="divider"></div>
-
-  - Add `double-indent` class to the last <div> to allow for individual styling:
-          <div class="divider double-indent"></div>
-- add a class `.double-indent` selector with a left margin of `2em`:
-  .double-indent{
-  margin-left: 2em;
-   }
-
-- Add a new <p> to show `Includes 10g Added Sugars` to the left and `20%` to the right in bold, make it double-indent and add a divider below it:
-        <p class="double-indent no-divider">Includes 10g Added Sugars <span class="bold">20%</span> </p> 
-      <div class="divider double-indent"></div>
-
-
-- 
